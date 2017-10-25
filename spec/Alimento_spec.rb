@@ -26,4 +26,9 @@ context "To String" do
       expect(Alimento.new("manzana", 10, 10, 10).to_s).to eq("manzana: 10g proteínas, 10g glúcidos, 10g lípidos")
     end
 end
+  context "Kcal" do
+    it "Tiene un método para obtener el valor energético del alimento" do
+      expect(Alimento.new("manzana", 1, 2, 3).kcal).to eq(2*4 + 1*4 + 3*9)
+    end
+  end
 end
