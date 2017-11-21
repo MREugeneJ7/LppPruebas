@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  File: README
+  
+    &mdash; Documentation by YARD 0.9.9
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "README";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><div id='filecontents'>
+<h1 id="label-Alimento">Alimento</h1>
+
+<p>La gema Alimento contiene la clase alimento, la cual permite la creación de
+un objeto Alimento con un identificador literal y unas componentes basadas
+en los glúcidos, lípidos y proteínas para gestionar las calorías
+proporcionadas por este.</p>
+
+<h2 id="label-Instalaci-C3-B3n">Instalación</h2>
+
+<p>Añade esta línea a tu documento Gemgfile:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_gem'>gem</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Alimento</span><span class='tstring_end'>&#39;</span></span>
+</code></pre>
+
+<p>y ejecuta el comando:</p>
+
+<pre class="code ruby"><code class="ruby">$ bundle</code></pre>
+
+<p>O realiza una instalación directa con:</p>
+
+<pre class="code ruby"><code class="ruby">$ gem install Alimento</code></pre>
+
+<h2 id="label-Detalles+de+las+clases">Detalles de las clases</h2>
+
+<h3 id="label-Alimento">Alimento</h3>
+<ul><li>
+<p>Creacion de Alimento: Alimento.new(Nombre, gr glúcidos, gr proteínas, gr
+lípidos).</p>
+</li><li>
+<p>Tiene métodos para el acceso de lectura a los atributos <em>nombre</em>,
+<em>glucidos</em>, <em>proteinas</em> y <em>lipidos</em>.</p>
+</li><li>
+<p>kcal: método para el cálculo. Devuelve el valor energético del alimento en
+kilocalorías.</p>
+</li><li>
+<p>Es comparable</p>
+</li></ul>
+
+<h3 id="label-AlimentoCategorizable">AlimentoCategorizable</h3>
+<ul><li>
+<p>Creacion de AlimentoCategorizable: AlimentoCategorizable.new(Nombre,
+categoria, gr glúcidos, gr proteínas, gr lípidos)</p>
+</li><li>
+<p>Hereda la funcionalidad de Alimento</p>
+</li><li>
+<p>Tiene un atributo <em>categoria</em>, su grupo alimenticio, y métodos para
+su acceso de lectura</p>
+</li></ul>
+
+<h3 id="label-Node">Node</h3>
+<ul><li>
+<p>Creacion de Node: Node.new(valor, nodo siguiente, nodo previo).</p>
+</li><li>
+<p>Tiene métodos de acceso y modificación de los atributos <em>value</em>,
+<em>next</em> y <em>prev</em>.</p>
+</li></ul>
+
+<h3 id="label-Lista">Lista</h3>
+<ul><li>
+<p>Creacion de Lista: Lista.new()</p>
+</li><li>
+<p>Tiene métodos de acceso para sus atributos <em>head</em> y <em>tail</em>,
+lo que permite hacer comprobación del contenido previa sustracción o
+inserción.</p>
+</li><li>
+<p>Tiene métodos para la extracción (<em>pop_head</em>, <em>pop_tail</em>)
+para eliminar un nodo de la lista y obtener su contenido (su valor
+Node.value).</p>
+</li><li>
+<p>Tiene métodos para la inserción de elementos (<em>push_head(x)</em>,
+<em>push_tail</em>) para la inclusión de un nodo en la lista.</p>
+</li><li>
+<p>Es enumerable</p>
+</li></ul>
+
+<h3 id="label-GrupoAlimenticio">GrupoAlimenticio</h3>
+<ul><li>
+<p>Creacion de GrupoAlimenticio: GrupoAlimenticio.new(Categoria).</p>
+</li><li>
+<p>Hereda su funcionalidad de la lista</p>
+</li><li>
+<p>Tiene un atributo <em>categoria</em> que define la categoria de los
+alimentos que se meten en la lista, y su método de lectura</p>
+</li></ul>
+
+<h2 id="label-Licencia">Licencia</h2>
+
+<p>La gema está disponible como código abierto bajo los términos de la <a
+href="http://opensource.org/licenses/MIT">Licencia MIT</a>.</p>
+</div></div>
+
+      <div id="footer">
+  Generated on Mon Nov 13 23:00:42 2017 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.9 (ruby-2.3.4).
+</div>
+
+    </div>
+  </body>
+</html>
