@@ -6,7 +6,7 @@
 <title>
   Class: Alimento
   
-    &mdash; Documentation by YARD 0.9.9
+    &mdash; Documentation by YARD 0.9.10
   
 </title>
 
@@ -127,7 +127,7 @@ glucidos, proteinas y lipidos contenidos</p>
       
         
         <div class='inline'>
-<p>Sebastian Jose Diaz Rodriguez</p>
+<p>Eugenio José Gonzalez Luis</p>
 </div>
       
     </li>
@@ -186,6 +186,33 @@ glucidos, proteinas y lipidos contenidos</p>
   <span class="summary_signature">
     
       <a href="#glucidos-instance_method" title="#glucidos (instance method)">#<strong>glucidos</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#indexGluc-instance_method" title="#indexGluc (instance method)">#<strong>indexGluc</strong>  &#x21d2; Object </a>
     
 
     
@@ -388,6 +415,30 @@ glucidos, proteinas y lipidos contenidos</p>
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#calculate_index-instance_method" title="#calculate_index (instance method)">#<strong>calculate_index</strong>(data, gluc)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Calcula el indice glucemico de un alimento.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(nombre, glucidos, proteinas, lipidos)  &#x21d2; Alimento </a>
     
 
@@ -581,7 +632,8 @@ glucidos, proteinas y lipidos contenidos</p>
 22
 23
 24
-25</pre>
+25
+26</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/alimento/Alimento.rb', line 20</span>
@@ -591,6 +643,7 @@ glucidos, proteinas y lipidos contenidos</p>
     <span class='ivar'>@glucidos</span> <span class='op'>=</span> <span class='id identifier rubyid_glucidos'>glucidos</span>
     <span class='ivar'>@proteinas</span> <span class='op'>=</span> <span class='id identifier rubyid_proteinas'>proteinas</span>
     <span class='ivar'>@lipidos</span> <span class='op'>=</span> <span class='id identifier rubyid_lipidos'>lipidos</span>
+    <span class='ivar'>@indexGluc</span> <span class='op'>=</span> <span class='kw'>nil</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -653,6 +706,63 @@ glucidos, proteinas y lipidos contenidos</p>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_glucidos'>glucidos</span>
   <span class='ivar'>@glucidos</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="indexGluc-instance_method">
+  
+    #<strong>indexGluc</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+11
+12
+13</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/alimento/Alimento.rb', line 11</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_indexGluc'>indexGluc</span>
+  <span class='ivar'>@indexGluc</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1040,15 +1150,156 @@ el otro objeto Alimento</p>
       <pre class="lines">
 
 
-43
-44
-45</pre>
+76
+77
+78</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/alimento/Alimento.rb', line 43</span>
+      <pre class="code"><span class="info file"># File 'lib/alimento/Alimento.rb', line 76</span>
 
 <span class='kw'>def</span> <span class='op'>&lt;=&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_kcal'>kcal</span> <span class='op'>&lt;=&gt;</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_kcal'>kcal</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="calculate_index-instance_method">
+  
+    #<strong>calculate_index</strong>(data, gluc)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Calcula el indice glucemico de un alimento</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Valores de los datos glucemicos de un alimento</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>gluc</span>
+      
+      
+        <span class='type'>(<tt>array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Valores de la glucosa</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>1.0.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/alimento/Alimento.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_calculate_index'>calculate_index</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='id identifier rubyid_gluc'>gluc</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_aibc'>aibc</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span>
+			<span class='id identifier rubyid_t'>t</span> <span class='op'>=</span> <span class='int'>0</span>
+			<span class='id identifier rubyid_x'>x</span><span class='period'>.</span><span class='id identifier rubyid_each_index'>each_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='op'>|</span> 
+<span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_a'>a</span>  <span class='op'>!=</span> <span class='int'>0</span><span class='rparen'>)</span> 
+	<span class='id identifier rubyid_t'>t</span> <span class='op'>+=</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_x'>x</span><span class='lbracket'>[</span><span class='id identifier rubyid_a'>a</span><span class='rbracket'>]</span> <span class='op'>-</span> <span class='id identifier rubyid_x'>x</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='lparen'>(</span><span class='id identifier rubyid_x'>x</span><span class='lbracket'>[</span><span class='id identifier rubyid_a'>a</span> <span class='op'>-</span> <span class='int'>1</span><span class='rbracket'>]</span> <span class='op'>-</span> <span class='id identifier rubyid_x'>x</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='op'>/</span><span class='int'>2</span><span class='rparen'>)</span><span class='op'>*</span><span class='int'>5</span>  
+<span class='kw'>end</span> 
+			<span class='kw'>end</span> 
+			<span class='id identifier rubyid_aibc'>aibc</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_t'>t</span>
+		<span class='kw'>end</span>
+		<span class='id identifier rubyid_gluc'>gluc</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span>
+			<span class='id identifier rubyid_t'>t</span> <span class='op'>=</span> <span class='int'>0</span>
+			<span class='id identifier rubyid_x'>x</span><span class='period'>.</span><span class='id identifier rubyid_each_index'>each_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='op'>|</span> 
+<span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_a'>a</span>  <span class='op'>!=</span> <span class='int'>0</span><span class='rparen'>)</span> 
+	<span class='id identifier rubyid_t'>t</span> <span class='op'>+=</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_x'>x</span><span class='lbracket'>[</span><span class='id identifier rubyid_a'>a</span><span class='rbracket'>]</span> <span class='op'>-</span> <span class='id identifier rubyid_x'>x</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='lparen'>(</span><span class='id identifier rubyid_x'>x</span><span class='lbracket'>[</span><span class='id identifier rubyid_a'>a</span> <span class='op'>-</span> <span class='int'>1</span><span class='rbracket'>]</span> <span class='op'>-</span> <span class='id identifier rubyid_x'>x</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='op'>/</span><span class='int'>2</span><span class='rparen'>)</span><span class='op'>*</span><span class='int'>5</span>
+<span class='kw'>end</span> 
+			<span class='kw'>end</span> 
+			<span class='id identifier rubyid_aibc'>aibc</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_t'>t</span>
+		<span class='kw'>end</span>
+		<span class='id identifier rubyid_igind'>igind</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+		<span class='id identifier rubyid_aibc'>aibc</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each_index'>each_index</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span>  <span class='id identifier rubyid_igind'>igind</span> <span class='op'>&lt;&lt;</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_aibc'>aibc</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_x'>x</span><span class='rbracket'>]</span> <span class='op'>/</span> <span class='id identifier rubyid_aibc'>aibc</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_x'>x</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='int'>100</span><span class='rparen'>)</span><span class='rbrace'>}</span>
+		<span class='id identifier rubyid_suma'>suma</span> <span class='op'>=</span> <span class='int'>0</span>
+		<span class='id identifier rubyid_igind'>igind</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span> <span class='id identifier rubyid_suma'>suma</span> <span class='op'>+=</span> <span class='id identifier rubyid_x'>x</span><span class='rbrace'>}</span>
+		<span class='ivar'>@indexGluc</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_suma'>suma</span> <span class='op'>/</span> <span class='id identifier rubyid_igind'>igind</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='rparen'>)</span>
+    
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1115,12 +1366,12 @@ el otro objeto Alimento</p>
       <pre class="lines">
 
 
-36
-37
-38</pre>
+69
+70
+71</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/alimento/Alimento.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'lib/alimento/Alimento.rb', line 69</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_kcal'>kcal</span>
     <span class='ivar'>@proteinas</span> <span class='op'>*</span> <span class='int'>4</span> <span class='op'>+</span> <span class='ivar'>@glucidos</span> <span class='op'>*</span> <span class='int'>4</span> <span class='op'>+</span> <span class='ivar'>@lipidos</span> <span class='op'>*</span> <span class='int'>9</span>
@@ -1190,13 +1441,13 @@ el otro objeto Alimento</p>
       <pre class="lines">
 
 
-29
-30
-31
-32</pre>
+62
+63
+64
+65</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/alimento/Alimento.rb', line 29</span>
+      <pre class="code"><span class="info file"># File 'lib/alimento/Alimento.rb', line 62</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
     <span class='id identifier rubyid_x'>x</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_nombre'>nombre</span><span class='embexpr_end'>}</span><span class='tstring_content'>: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_proteinas'>proteinas</span><span class='embexpr_end'>}</span><span class='tstring_content'>g proteínas, </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_glucidos'>glucidos</span><span class='embexpr_end'>}</span><span class='tstring_content'>g glúcidos, </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_lipidos'>lipidos</span><span class='embexpr_end'>}</span><span class='tstring_content'>g lípidos</span><span class='tstring_end'>&quot;</span></span>
@@ -1212,9 +1463,9 @@ el otro objeto Alimento</p>
 </div>
 
       <div id="footer">
-  Generated on Mon Nov 13 23:00:43 2017 by
+  Generated on Wed Nov 22 01:35:46 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.9 (ruby-2.3.4).
+  0.9.10 (ruby-2.3.0).
 </div>
 
     </div>

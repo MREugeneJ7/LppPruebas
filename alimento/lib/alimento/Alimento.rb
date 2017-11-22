@@ -1,6 +1,6 @@
 # Representación de un alimento según sus calorías aportadas y la cantidad de glucidos, proteinas y lipidos contenidos
 # 
-# @author Sebastian Jose Diaz Rodriguez
+# @author Eugenio José Gonzalez Luis
 # @since 1.0.0
 # @attr_reader String nombre Nombre del alimento
 # @attr_reader Number glucidos glucidos contenidos en el alimento
@@ -28,7 +28,7 @@ class Alimento
     #Calcula el indice glucemico de un alimento
     #
     #@param data [array] Valores de los datos glucemicos de un alimento
-    #@para gluc [array] Valores de la glucosa
+    #@param gluc [array] Valores de la glucosa
     def calculate_index(data, gluc)
         aibc = [[],[]]
         data.each do |x|
