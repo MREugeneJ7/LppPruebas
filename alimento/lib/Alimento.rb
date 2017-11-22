@@ -6,5 +6,5 @@ require "alimento/GrupoAlimenticio"
 
 # Espacio de nombre que contiene las clases y metodos para el manejo de listas, nodos, alimentos y grupos de alimentos
 # @since 1.0.0
-module ALU0100893649_ALIMENTO
+module ALU0101000756_ALIMENTO
 end
