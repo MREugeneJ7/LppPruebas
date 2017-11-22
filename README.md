@@ -26,6 +26,7 @@ O realiza una instalación directa con:
 - Tiene métodos para el acceso de lectura a los atributos _nombre_, _glucidos_, _proteinas_ y _lipidos_.
 - kcal: método para el cálculo. Devuelve el valor energético del alimento en kilocalorías.
 - Es comparable
+- calculate_index: Tiene un metodo para calcular el indice glucemico
 
 ### AlimentoCategorizable
 - Creacion de AlimentoCategorizable: AlimentoCategorizable.new(Nombre, categoria, gr glúcidos, gr proteínas, gr lípidos)
