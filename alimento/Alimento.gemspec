@@ -6,8 +6,8 @@ require "alimento/version"
 Gem::Specification.new do |spec|
   spec.name          = "Alimento"
   spec.version       = Alimento::VERSION
-  spec.authors       = ["Sebastian Diaz"]
-  spec.email         = ["alu0100893649@ull.edu.es"]
+  spec.authors       = ["Eugenio José"]
+  spec.email         = ["alu0101000756@ull.edu.es"]
 
   spec.summary       = %q{"Clase para gestionar los glúcidos, lípidos y proteínas de un alimento específico"}
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
