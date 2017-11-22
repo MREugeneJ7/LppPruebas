@@ -29,7 +29,7 @@ class Alimento
     #
     #@param data [array] Valores de los datos glucemicos de un alimento
     #@para gluc [array] Valores de la glucosa
-    def calculate_Index(data, gluc)
+    def calculate_index(data, gluc)
         aibc = [[],[]]
         data.each do |x|
 			t = 0
@@ -38,19 +38,19 @@ class Alimento
 					t += (((x[a] - x[0]) + (x[a - 1] - x[0])) /2)*5  
 				end 
 			end 
-			aibc[1] << t
+			aibc[0] << t
 		end
-		glucosa.each do |x|
+		gluc.each do |x|
 			t = 0
 			x.each_index do |a| 
 				if (a  != 0) 
 					t += (((x[a] - x[0]) + (x[a - 1] - x[0])) /2)*5
 				end 
 			end 
-			aibc[2] << t
+			aibc[1] << t
 		end
 		igind = []
-		aibc[1].each_index { |x|  igind << ((aibc[1][x] / aibc[2][x]) * 100)}
+		aibc[0].each_index { |x|  igind << ((aibc[0][x] / aibc[1][x]) * 100)}
 		suma = 0
 		igind.each{ |x| suma += x}
 		@indexGluc = (suma / igind.length)
