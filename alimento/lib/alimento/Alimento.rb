@@ -8,7 +8,7 @@
 # @attr_reader Number lipidos lipidos contenidos en el alimento
 class Alimento
     include Comparable
-    attr_reader :nombre, :glucidos, :proteinas, :lipidos, :indexGlucose
+    attr_reader :nombre, :glucidos, :proteinas, :lipidos, :indexGluc
     
     # Constructor de Alimento
     # @param [String] nombre nombre del alimento
@@ -22,7 +22,39 @@ class Alimento
         @glucidos = glucidos
         @proteinas = proteinas
         @lipidos = lipidos
-        @indexGlucose = nil
+        @indexGluc = nil
+    end
+    
+    #Calcula el indice glucemico de un alimento
+    #
+    #@param data [array] Valores de los datos glucemicos de un alimento
+    #@para gluc [array] Valores de la glucosa
+    def calculate_Index(data, gluc)
+        aibc = [[],[]]
+        data.each do |x|
+			t = 0
+			x.each_index do |a| 
+				if (a  != 0) 
+					t += (((x[a] - x[0]) + (x[a - 1] - x[0])) /2)*5  
+				end 
+			end 
+			aibc[1] << t
+		end
+		glucosa.each do |x|
+			t = 0
+			x.each_index do |a| 
+				if (a  != 0) 
+					t += (((x[a] - x[0]) + (x[a - 1] - x[0])) /2)*5
+				end 
+			end 
+			aibc[2] << t
+		end
+		igind = []
+		aibc[1].each_index { |x|  igind << ((aibc[1][x] / aibc[2][x]) * 100)}
+		suma = 0
+		igind.each{ |x| suma += x}
+		@indexGluc = (suma / igind.length)
+        
     end
     
     # Convierte el objeto en un String
