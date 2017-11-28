@@ -1,7 +1,7 @@
 # Representación de un grupo alimenticio con categoría
 # Hereda de Lista
 #
-# @author Sebastian Jose Diaz Rodriguez
+# @author Eugenio José González Luis
 # @since 1.0.0
 # @attr_reader String categoria categoria del grupo alimenticio representado
 # @attr_reader Node head Nodo en la cabeza de la lista

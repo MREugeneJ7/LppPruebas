@@ -1,7 +1,7 @@
 # Representación de un alimento categorizable según sus calorías aportadas y la cantidad de glucidos, proteinas y lipidos contenidos
 # Hereda de la clase Alimento
 #
-# @author Sebastian Jose Diaz Rodriguez
+# @author Eugenio José González Luis
 # @since 1.0.0
 # @attr_reader String categoria Categoria del alimento
 # @attr_reader String nombre Nombre del alimento
